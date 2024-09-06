@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieApp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+<header >
+  <div class = "header__content"> 
+    <a href = "index.html" class = "header__logo">Кинопоиск</a>
+    <form>
+      <img src = "https://i123.fastpic.org/big/2024/0816/7b/b54636a3d55c3e851acce6565383137b.png" width = "18px" class = "search__img">
+      <input type = "text" id = "header__search" placeholder = "Поиск" />
+      <button type = "button" class = "button search__button">Найти</button>
+  </form>
+    <a href="favorites.html" class = "favorites">Избранное</a>
+  </div>
+</header> 
+<main class = "container">
+    <section class="filters">
+     <div>
+       <button type = "button" class="filters__button">Жанр 
+      <img src = "https://i123.fastpic.org/big/2024/0820/f3/bf178c00151cc1702ef01974c99b1ef3.png" width = "24px"> 
+       </button>
+       <div class="filters__content">
+        <a href="#">Ссылка 1</a>
+        <a href="#">Ссылка 2</a>
+        <a href="#">Ссылка 3</a>
+  </div>
+</div>
+       <div>
+       <button type = "button" class="filters__button">Год<img src = "https://i123.fastpic.org/big/2024/0820/f3/bf178c00151cc1702ef01974c99b1ef3.png" width = "24px"> 
+         </button>
+       <div class="filters__content">
+        <a href="#">Ссылка 1</a>
+        <a href="#">Ссылка 2</a>
+        <a href="#">Ссылка 3</a>
+  </div>
+</div>
+       <div>
+       <button type = "button" class="filters__button">Страна
+         <img src = "https://i123.fastpic.org/big/2024/0820/f3/bf178c00151cc1702ef01974c99b1ef3.png" width = "24px">
+         </button>
+       <div class="filters__content">
+        <a href="#">Ссылка 1</a>
+        <a href="#">Ссылка 2</a>
+        <a href="#">Ссылка 3</a>
+  </div>
+</div>
+    </section>
+  <section class = "movies">
+    <template id = "movie">
+    <a href = "#" class="movie__thumbnail">
+      <img class="movie__img" src="" width="264" height="309" alt="">
+      <div class = "movie__title"> 
+      <p class="movie__name"> </p>
+       <span class="movie__rating"></span>
+           </div>
+        <div class = "movie__details"></div>
+          <div class = "movie__favourite hidden"><img src = "https://i123.fastpic.org/big/2024/0820/a4/49c4f48442a0e7038959a17794271fa4.png" width = "28px" class = "favourite-img" alt = "favourite">   
+          </div>
+    </a>
+    </template>
+  </section>
+  <div class="pagination">1</div>
+  
+  <section class = "modal hidden"> 
+   <button type="reset" class="modal__cancel">Закрыть</button> 
+  <div class = "modal__movie-main">
+    <div class = "movie__poster">
+      <img class="movie__img" src="" width="287" height="437" alt="">
+    </div>
+    <div class = "movie__info"> 
+    <h1 class = "movie__title"></h1>
+    <p class = "movie__title-original"></p>
+    <p class = "movie__details"></p>
+    <p class = "movie__summary"></p>
+    <div class = "movie__ratings">
+      <div class = "rating__IMDB">
+        <p class = "rating-name"> IMDB</p>
+        <p class = "rating-value">  </p>
+      </div>
+            <div class = "rating__kinopoisk">
+        <p class = "rating-name"> Кинопоиск</p>
+        <p class = "rating-value"></p>
+      </div>
+      </div> 
+      </div>
+    <button type = "button" class = "button favourites__button">Добавить в избранное</button>
+          </div>
+   <div class = "modal__movie-actors">
+     <h2 class = "actors__title">В главной роли</h2>
+     <div class = "actors_list">
+     <template id = "actor">
+       <div class = "actor__thumbnail">
+    <div class="movie__actor">
+      <img class="actor__img" src="" width="112" height="127" alt=""> 
+      <p class = "actor__name"></p>
+       </div>
+       </div>
+    </template>
+        </div>
+    </div>
+  </section>
+</main>
+    <script src="main.js"></script>
+  </body>
+</html>
